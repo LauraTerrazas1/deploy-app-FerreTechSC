@@ -34,6 +34,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { DetallePedidosComponent } from './components/detalle-pedidos/detalle-pedidos.component';
 import { ResumenCompraComponent } from './components/resumen-compra/resumen-compra.component';
 import { TrackingPedidoComponent } from './components/tracking-pedido/tracking-pedido.component';
+import { DetalleEntregaFormComponent } from './components/detalle-entrega-form/detalle-entrega-form.component';
 
 
 const routes: Routes = [
@@ -77,6 +78,7 @@ const routes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'carrito', component: CarritoComponent},
   { path: 'tracking-pedido', component: TrackingPedidoComponent },
+  { path: 'detalle-entrega-form/:id', component: DetalleEntregaFormComponent, canActivate: [AuthGuard] },
 
   // Redirecciones
   { path: '', redirectTo: 'principal', pathMatch: 'full' },

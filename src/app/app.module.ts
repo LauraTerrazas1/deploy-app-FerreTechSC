@@ -62,6 +62,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './services/authInterceptor';
 import { ResumenCompraComponent } from './components/resumen-compra/resumen-compra.component';
 import { DetallePedidosComponent } from './components/detalle-pedidos/detalle-pedidos.component';
+import { DetalleEntregaFormComponent } from './components/detalle-entrega-form/detalle-entrega-form.component';
 CarritoComponent
 
 @NgModule({
@@ -104,7 +105,8 @@ CarritoComponent
     DetallePedidosComponent,
     LoginComponent,
     HeaderComponent,
-    TrackingPedidoComponent
+    TrackingPedidoComponent,
+    DetalleEntregaFormComponent
 
   ],
   imports: [

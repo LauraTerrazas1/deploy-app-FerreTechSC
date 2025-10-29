@@ -1,0 +1,126 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<main class="main-content">
+  <div class="separador">
+    <div class="header-title">
+      <a routerLink="/entregas"><i class="bi bi-arrow-bar-left"></i> Regresar</a>
+      <p class="title">Detalle de Entrega</p>
+    </div>
+
+    <!-- FORMULARIO DE DETALLE DE ENTREGA -->
+    <div class="formulario">
+      <form [formGroup]="entregaForm">
+        
+        <!-- INFORMACIÓN GENERAL DEL PEDIDO -->
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Información General del Pedido</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label">Código de pedido</label>
+                <input type="text" class="form-control" formControlName="codigoPedido">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">ID</label>
+                <input type="text" class="form-control" formControlName="id">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Fecha actual y fecha de pedido</label>
+                <input type="text" class="form-control" formControlName="fechaActual">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Fecha (estado)</label>
+                <input type="text" class="form-control" formControlName="fechaEstado">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Estado actual</label>
+                <input type="text" class="form-control" formControlName="estadoActual">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DETALLE DE PEDIDO -->
+        <div class="card mb-4">
+          <div class="card-header bg-success text-white">
+            <h5 class="mb-0">Detalle de Pedido</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label">Nº pedido</label>
+                <input type="text" class="form-control" formControlName="numeroPedido">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Fecha de registro</label>
+                <input type="text" class="form-control" formControlName="fechaRegistro">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Estado</label>
+                <input type="text" class="form-control" formControlName="estado">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Descripción del producto</label>
+                <input type="text" class="form-control" formControlName="descripcionProducto">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DETALLE DE CLIENTE -->
+        <div class="card mb-4">
+          <div class="card-header bg-info text-white">
+            <h5 class="mb-0">Detalle de Cliente</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" formControlName="correo">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Dirección</label>
+                <input type="text" class="form-control" formControlName="direccion">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Teléfono</label>
+                <input type="text" class="form-control" formControlName="telefono">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Tipo de documento</label>
+                <select class="form-select" formControlName="tipoDocumento">
+                  <option value="">Seleccionar</option>
+                  <option value="DNI">DNI</option>
+                  <option value="RUC">RUC</option>
+                  <option value="CE">Carné de Extranjería</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Número de documento</label>
+                <input type="text" class="form-control" formControlName="numeroDocumento">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTONES DE ACCIÓN -->
+        <div class="d-flex justify-content-end gap-2">
+          <button type="button" class="btn btn-secondary" (click)="cancelar()">
+            <i class="bi bi-x-circle me-2"></i>Cancelar
+          </button>
+          <button type="button" class="btn btn-primary" (click)="guardar()">
+            <i class="bi bi-check-circle me-2"></i>Guardar
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
